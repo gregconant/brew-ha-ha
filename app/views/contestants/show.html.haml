@@ -1,0 +1,25 @@
+%p{id:"notice"}= notice
+
+%p
+  %strong First name:
+  - @contestant.first_name
+
+%p
+  %strongLast name:
+  - @contestant.last_name
+
+
+%p
+  %strongNickname:
+  - @contestant.nickname
+
+%p
+  %strongDescription:
+  - @contestant.description
+
+%p
+  %strong Date added:
+  - @contestant.date_added
+
+%div= link_to 'Edit', edit_contestant_path(@contestant)
+%div= link_to 'Back', contestants_path

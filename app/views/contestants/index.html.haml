@@ -1,0 +1,25 @@
+%h1 Listing contestants
+
+%table
+  %thead
+    %tr
+      %th First Name
+      %th Last Name
+      %th Nickname
+      %th Description
+      %th Date added
+  %tbody
+  - @contestants.each do |c|
+    %tr
+      %td=c.last_name
+      %td=c.first_name
+      %td=c.nickname
+      %td=c.description
+      %td=c.date_added
+      %td=link_to 'Details', contestant_path(c)
+      %td=link_to 'Edit', edit_contestant_path(c)
+      %td=link_to 'Delete', c, method: :delete, data: {confirm: 'Are you sure?' }
+
+%br
+%div= link_to 'New Contestant',   new_contestant_path
+

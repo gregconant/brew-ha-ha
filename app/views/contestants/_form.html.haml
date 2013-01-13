@@ -1,0 +1,38 @@
+= form_for(@contestant) do |f|
+  - if @contestant.errors.any?
+    %div{id:"error_explanation"}
+
+      %h2 "#{pluralize(@contestant.errors.count, "error")} prohibited this contestant from being saved:"
+
+      %ul
+      - @contestant.errors.full_messages.each do |msg|
+        %li= msg
+
+  %div{class:"field"}
+    = f.label :last_name
+    %br
+    = f.text_field :last_name
+
+  %div{class:"field"}
+    = f.label :first_name
+    %br
+    = f.text_field :first_name
+
+  %div{class:"field"}
+    = f.label :nickname
+    %br
+    = f.text_field :nickname
+
+  %div{class:"field"}
+    = f.label :description
+    %br
+    = f.text_field :description
+
+  %div{class:"field"}
+    = f.label :date_added
+    %br
+    = f.date_select :date_added
+  </div>
+
+  %div{class:"actions"}
+    = submit_tag 'Save'
