@@ -18,7 +18,7 @@ class ContestantsControllerTest < ActionController::TestCase
 
   test "should create contestant" do
     assert_difference('Contestant.count') do
-      post :create, contestant: { date_added: @contestant.date_added, description: @contestant.description, first_name: @contestant.first_name, id: @contestant.id, last_name: @contestant.last_name, nickname: @contestant.nickname }
+      post :create, contestant: { date_added: @contestant.date_added, description: @contestant.description, first_name: @contestant.first_name, last_name: @contestant.last_name, nickname: @contestant.nickname }
     end
 
     assert_redirected_to contestant_path(assigns(:contestant))
