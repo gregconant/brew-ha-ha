@@ -26,6 +26,8 @@ gem 'autotest'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

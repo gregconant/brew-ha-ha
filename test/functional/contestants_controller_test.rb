@@ -29,6 +29,11 @@ class ContestantsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should show create date in friendly format" do
+    get :show, id: 1
+    assert_select "div.date-added", 'Sat 12 Jan, 2013'
+  end
+
   test "should get edit" do
     get :edit, id: @contestant
     assert_response :success

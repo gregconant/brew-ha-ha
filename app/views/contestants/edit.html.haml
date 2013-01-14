@@ -1,5 +1,6 @@
 %h1 Editing contestant
-= form_for @contestant
 
-=link_to 'Show', @contestant
+=render 'form'
+
+=link_to 'Details', @contestant
 =link_to 'Back', contestants_path

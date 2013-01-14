@@ -1,25 +1,14 @@
+%h2 Details for #{@contestant.first_name} "#{@contestant.nickname}" #{@contestant.last_name}
+
 %p{id:"notice"}= notice
 
 %p
-  %strong First name:
-  - @contestant.first_name
-
-%p
-  %strongLast name:
-  - @contestant.last_name
-
-
-%p
-  %strongNickname:
-  - @contestant.nickname
-
-%p
-  %strongDescription:
-  - @contestant.description
+  %strong Description:
+  = @contestant.description
 
 %p
   %strong Date added:
-  - @contestant.date_added
+  %div{class:"date-added"}=@contestant.date_added.strftime('%a %d %b, %Y')
 
 %div= link_to 'Edit', edit_contestant_path(@contestant)
 %div= link_to 'Back', contestants_path
