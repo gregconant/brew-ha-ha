@@ -3,6 +3,7 @@
 %table{class: "contestants-table"}
   %thead
     %tr
+      %th
       %th First Name
       %th Last Name
       %th Nickname
@@ -11,6 +12,7 @@
   %tbody
   - @contestants.each do |c|
     %tr
+      %td=c.avatar
       %td=c.last_name
       %td=c.first_name
       %td=c.nickname
