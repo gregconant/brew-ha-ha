@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130113003713) do
+ActiveRecord::Schema.define(:version => 20130115015948) do
 
   create_table "contestants", :force => true do |t|
     t.string   "first_name"
@@ -19,8 +19,12 @@ ActiveRecord::Schema.define(:version => 20130113003713) do
     t.string   "nickname"
     t.string   "description"
     t.datetime "date_added"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "contestants", ["id"], :name => "index_contestants_on_id", :unique => true
