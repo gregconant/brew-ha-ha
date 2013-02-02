@@ -1,21 +1,14 @@
 %h1 Listing contestants
 
 %table{class: "contestants-table"}
-  %thead
-    %tr
-      %th
-      %th First Name
-      %th Last Name
-      %th Nickname
-      %th Description
-      %th Date added
   %tbody
   - @contestants.each do |c|
     %tr
-      %td=c.avatar
-      %td=c.last_name
+      %td
+        =link_to image_tag(c.avatar.url, :class=>'profile-image-small'),edit_contestant_path(c)
       %td=c.first_name
-      %td=c.nickname
+      %td= "" + c.nickname + ""
+      %td=c.last_name
       %td=c.description
       %td=c.date_added
       %td=link_to 'Details', contestant_path(c)

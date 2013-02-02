@@ -2,7 +2,7 @@
 
 %p{id:"notice"}= notice
 
-
+%img{class:"profile-image-large", src: @contestant.avatar.url}
 
 %p
   %strong Description:
@@ -10,7 +10,7 @@
 
 %p
   %strong Date added:
-  %div{class:"date-added"}=@contestant.date_added.strftime('%a %d %b, %Y')
+  %span{class:"date-added"}=@contestant.date_added.strftime('%a %d %b, %Y')
 
 %div= link_to 'Edit', edit_contestant_path(@contestant)
 %div= link_to 'Back', contestants_path
