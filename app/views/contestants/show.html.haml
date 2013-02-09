@@ -1,8 +1,9 @@
-%h2 Details for #{@contestant.first_name} "#{@contestant.nickname}" #{@contestant.last_name}
+%h2 #{@contestant.first_name} "#{@contestant.nickname}" #{@contestant.last_name}
 
 %p{id:"notice"}= notice
 
-
+%p
+  = image_tag @contestant.avatar.url, :class => "profile-image-large"
 
 %p
   %strong Description:
