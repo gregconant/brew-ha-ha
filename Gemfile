@@ -23,6 +23,8 @@ gem 'jquery-rails'
 
 gem 'autotest'
 
+gem 'compass', :require => false
+
 gem 'haml'
 gem 'haml-rails'
 
