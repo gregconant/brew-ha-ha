@@ -22,11 +22,15 @@ end
 gem 'jquery-rails'
 
 gem 'autotest'
+gem 'autotest-fsevent'
+gem 'autotest-growl'
+gem 'autotest-rails'
 
 gem 'compass', :require => false
 
 gem 'haml'
 gem 'haml-rails'
+
 
 gem 'paperclip', "~> 3.0"
 
