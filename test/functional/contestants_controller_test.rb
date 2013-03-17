@@ -26,12 +26,13 @@ class ContestantsControllerTest < ActionController::TestCase
 
   test "should show contestant" do
     get :show, id: @contestant
+    assert_select "h2", { :count => 1, :text => 'Grewg "Brewg" Smash' }
     assert_response :success
   end
 
   test "should show create date in friendly format" do
     get :show, id: 1
-    assert_select "div.date-added", 'Sat 12 Jan, 2013'
+    assert_select "span.date-added", 'Sat 12 Jan, 2013'
   end
 
   test "should get edit" do
